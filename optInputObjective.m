@@ -16,6 +16,6 @@ Simulator = sim(Simulator);
 loggedSignalName = get_param(modelName,'SignalLoggingName');
 SimLog = find(Simulator.LoggedData,loggedSignalName);
 
-OutputLog = find(SimLog,'IPA');
+OutputLog = find(SimLog,'Fatty acid');
 vals.F = -OutputLog.Values.Data(end);    
 end
