@@ -21,18 +21,20 @@ function [] = plotSimFA23(Exp,expIdx)
         OutputLog{outputIdx} = find(SimLog,outputNames{outputIdx});
     end
 
-    nexttile
-    stairs(Exp(expIdx).InputData(1).Values.Time,Exp(expIdx).InputData(1).Values.Data,'r-');
-    xlim([0 25])
-    ylim([10 1000])
-    ylabel('IPTG [uM]')
-    set(gca,'YScale','log')
+%     nexttile
+%     stairs(Exp(expIdx).InputData(1).Values.Time,Exp(expIdx).InputData(1).Values.Data,'r-');
+%     xlim([0 25])
+%     ylim([10 1000])
+%     ylabel('IPTG [uM]')
+%     set(gca,'YScale','log')
 
-    nexttile
-    stairs(Exp(expIdx).InputData(2).Values.Time,Exp(expIdx).InputData(2).Values.Data,'r-');
-    xlim([0 25])
-    ylim([0 1])
-    ylabel('Model selection')
+%     nexttile
+%     stairs(Exp(expIdx).InputData(2).Values.Time,Exp(expIdx).InputData(2).Values.Data,'r-');
+%     xlim([0 25])
+%     ylim([0 1])
+%     ylabel('Model selection')
+
+ylabelNames = {'OD600 [a.u.]' 'Fatty acid [g/L]'};
     
     yUpperLim = [2 2.5];
     for outputIdx = 1:outputN
@@ -47,7 +49,7 @@ function [] = plotSimFA23(Exp,expIdx)
             p(i).MarkerFaceColor = 'w';
             p(i).MarkerSize = 4;
         end
-        ylabel(outputNames{outputIdx});
+        ylabel(ylabelNames{outputIdx});
         xlim([0 25])
         ylim([0 yUpperLim(outputIdx)])
         % legend('Measured','Simulated','Location','northwest');
