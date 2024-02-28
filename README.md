@@ -1,5 +1,5 @@
 # README
-This program was used in the paper titled "A hybrid in silico/in-cell controller mitigates yield loss due to process-model mismatch in overexpression of a rate-limiting enzyme" by Ohkubo _et al_., published on _bioRxiv_ in 2024. 
+This program was used in the paper titled "Designing a Hybrid In Silico/In-Cell Controller Robust to Process–Model Mismatch Associated with Dynamically Regulated Enzyme Overexpression" by Ohkubo _et al_., published on _bioRxiv_ in 2024. 
 In this study, MATLAB/Simulink 2022a and following products and toolboxes were used. We have not confirmed that the program works with any other version.
 - Simulink Design Optimization
 - Optimization Toolbox
